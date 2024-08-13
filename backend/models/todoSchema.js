@@ -6,18 +6,11 @@ const todoSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        trim: true,
-        immutable: true
+        trim: true
     },
     description: {
         type: String,
         required: false
-    },
-    number: {
-        type: String,
-        required: true,
-        unique: true
     }
-    
 });
 module.exports = mongoose.model("ToDo", todoSchema);
